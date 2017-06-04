@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>衬衫主页面</title>
+		<link rel="stylesheet" type="text/css" href="../public/css/base.css"/>
+		<script src="../../public/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/js/base.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.showchen{
+				width: 100%;
+				margin-top: 30px;
+			}
+			.showchen .chaqu{
+				background: #FFCCCC;
+			}
+			.showchen ul{
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+			    justify-content: space-around;
+				margin-top: 30px;
+				flex-wrap: wrap;
+			}
+			.showchen ul li{
+				width:18%;
+				position: relative;
+				margin-bottom: 30px;
+				cursor: pointer;
+			}
+			.showchen ul li img{
+				max-width: 100%;
+			}
+			.showchen .details{
+				width: 100%;
+				height: 40px;
+				background: #666666 ;
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				opacity: .8;
+				text-align: center;
+				color: #FFFFFF;
+				font-size: 17px;
+				font-weight: bold;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+	    <!--重复的上部分-->
+		   <div class="top">
+				<ul>
+					<li>您好,欢迎光临SFS芯心小店！</li>
+					<li><a href="../user/login.html">登录</a></li>
+					<li><a href="../user/register.html">注册</a></li>
+					<li><a href="#">我的订单</a></li>
+				</ul>
+			</div>
+			<div class="log">
+	         <div class="lleft">
+	         	<img src="../public/img/log.png"/>
+	         	<a href="#">SFS芯心小店</a>
+	         </div>
+		     <div class="lright">
+		     	<input type="text" name="search" class="search" placeholder="女装"/>
+		     	<input type="button" class="btn" value="搜索" />
+		     	<div class="car">
+		     		<a  href="#">我的购物车</a>
+		     	</div>
+		     </div>
+			</div>
+		    <div class="navbar">
+		    	<ul class="one">
+		    		<li><a href="../index.html">首页</a></li>
+		    		<li>
+		    			<a href="Tindex.html">T恤</a>
+		    			<div>
+		    			<span><a href="../cchilds/bt.html">白色T恤</a></span>
+		    			<span><a href="../cchilds/bt.html">黑色T恤</a></span>
+		    			<span><a href="../cchilds/bt.html">卡通T恤</a></span>
+		    			<span><a href="../cchilds/bt.html">文字T恤</a></span>
+		    		    </div>
+		    			</li>
+		    		</li>
+		    		<li >
+		    			<a href="Chen.html">衬衫</a>
+		    			<div>
+		    			<span><a href="../cchilds/bt.html">白色衬衫</a></span>
+		    			<span><a href="../cchilds/bt.html">条纹衬衫</a></span>
+		    			<span><a href="../cchilds/bt.html">牛仔衬衫</a></span>
+		    		    </div>
+		    		</li>
+		    		<li>
+		    			<a href="weiyi.html">外套</a>
+		    			<div>
+		    			<span><a href="../cchilds/bt.html">卫衣</a></span>
+		    			<span><a href="../cchilds/bt.html">皮衣</a></span>
+		    			<span><a href="../cchilds/bt.html">西装</a></span>
+		    			<span><a href="../cchilds/bt.html">短外套</a></span>
+		    		    </div>
+		    		</li>
+		    		<li>
+		    			<a href="qunzi.html">裙子</a>
+		    			<div>
+		    			<span><a href="../cchilds/bt.html">短裙</a></span>
+		    			<span><a href="../cchilds/bt.html">长裙</a></span>
+		    			<span><a href="../cchilds/bt.html">皮裙</a></span>
+		    			<span><a href="../cchilds/bt.html">复古裙</a></span>
+		    		    </div>
+		    		</li>	    		
+		    		<li>
+		    			<a href="kuzi.html">裤装</a>
+		    			<div>
+		    			<span><a href="../cchilds/bt.html">短裤</a></span>
+		    			<span><a href="../cchilds/bt.html">九分裤</a></span>
+		    			<span><a href="../cchilds/bt.html">高腰裤</a></span>
+		    			<span><a href="../cchilds/bt.html">打底裤</a></span>
+		    			<span><a href="../cchilds/bt.html">牛仔裤</a></span>
+		    		    </div>
+		    		</li>
+		    	</ul>
+		    </div>
+		    <div class="lunbo">
+				<ul>
+					<li><a href="#"><img src="../public/img/1.jpg"/></a></li>
+					<li><a href="#"><img src="../public/img/2.jpg"/></a></li>
+					<li><a href="#"><img src="../public/img/3.jpg"/></a></li>
+				</ul>
+			</div>
+		<!--中间不同的部分衬衫展示区
+			白色衬衫，
+			条纹衬衫
+			牛仔衬衫
+		-->
+		<div class="showchen">
+			<a href="#">
+			<div class="wchen">
+				<h2 class="chaqu">白衬衫</h2>
+	    	<ul>
+	    	
+	    	</ul>
+			</div>
+			</a>
+			<a href="#">
+			<div class="tchen">
+				<h2 class="chaqu">条纹衬衫</h2>
+	    	<ul>
+	    	
+	    	</ul>
+			</div>
+			</a>
+			<a href="#">
+			<div class="nchen">
+				<h2 class="chaqu">牛仔衬衫</h2>
+	    	<ul>
+	    	
+	    	</ul>
+			</div>
+			</a>
+		</div>
+		<!--重复的下部分-->
+		<div class="foot">
+			
+		</div>
+	</div>
+	</body>
+	<script type="text/javascript">
+			$(function(){
+			   $.get('basef.html',function(data){
+			   $('.foot').html(data);
+			   });
+//			   衬衫特效1.鼠标滑过时 mark显示
+                   //2.detials慢慢的滑上来
+               function shows(obj){
+				   obj.mouseenter(function(){
+				   	$(this).find('.details').slideDown().siblings('li').slideUp();
+				   	$(this).find('.mark').show().siblings('li').hide();
+				   });
+				  };
+			  function hides(obj){
+				   obj.mouseleave(function(){
+				   	$(this).find('.mark').hide();
+				   	$(this).find('.details').slideUp();
+				   });
+			  };  
+			  //   模拟JSON对象优化代码
+			    var jsonwchen=[{'imgs':'chen5.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen2.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen3.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen4.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen5.jpg','hs':'韩范气质长袖白衬衫'},
+			    {'imgs':'chen5.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen4.jpg','hs':'一直都在找你'},{'imgs':'chen3.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen2.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen5.jpg','hs':'韩范气质长袖白衬衫'}];
+			    var jsontchen=[{'imgs':'tchen.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen2.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen3.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen4.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen5.jpg','hs':'条纹长袖时尚衬衫'},
+			    {'imgs':'tchen5.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen4.jpg','hs':'一直都在找你'},{'imgs':'tchen3.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen2.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen.jpg','hs':'条纹长袖时尚衬衫'}];
+			    var jsonnchen=[{'imgs':'nchen.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen2.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'nchen3.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen4.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen5.jpg','hs':'牛仔衬衫长袖女'},
+			    {'imgs':'nchen5.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen4.jpg','hs':'一直都在找你'},{'imgs':'nchen3.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen2.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen.jpg','hs':'牛仔衬衫长袖女'}];
+			      var src=''; 
+			      function bangding(yuansu,jsons,orgin){
+			      	$.each(jsons,function(index,item){
+			    	orgin+='<li>';
+			    	orgin+='<div class="mark">';
+			    	orgin+='</div>';
+			    	orgin+='<a href="#"><img src="../public/img/'+item.imgs+'"/></a>';
+			    	orgin+='<div class="details"><p>'+item.hs+'</p></div>';
+			    	orgin+='</li>';
+			    });
+			      yuansu.html(orgin);
+			    }
+			    bangding($('.wchen ul'),jsonwchen,src);
+			    bangding($('.tchen ul'),jsontchen,src);
+			    bangding($('.nchen ul'),jsonnchen,src);
+			  shows($('.wchen ul li'));
+			  hides($('.wchen ul li'));
+			  shows($('.tchen ul li'));
+			  hides($('.tchen ul li'));
+			  shows($('.nchen ul li'));
+			  hides($('.nchen ul li'));
+			});
+		</script>
+</html>

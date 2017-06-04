@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎您登录</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../../public/bs/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/lr.css"/>
+		<style type="text/css">
+			.warp .top{
+				width: 100%;
+				height: 60px;	
+			  }
+			.c-right input{
+				display:block;
+				width:100%;
+				height: 40px;
+				margin-bottom: 30px;
+			}
+			.c-right input:nth-of-type(4){
+				background: #FFC0CB;
+				border: 2px solid gray;
+				border-radius: 20px;
+			}
+			.tishi{
+            	color: red;
+            	font-size: 18px;
+            	font-weight: 700;
+            	text-align: center;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			<div class="top">
+				<h1>SFS芯心小店</h1>
+			</div>
+			<div class="content">
+				<div class="c-left">
+					<img src="../public/img/loge.png"/>
+				</div>
+				<div class="c-right">
+					<div class="ct">
+						<p>SFS芯心小店登录</p>
+						<p>没有账号免费<a href="register.html">注册</a></p>
+					</div>
+					<form>
+						<input  type="button" value="欢迎登录！"/>
+						<input class="form-control" type="text" name="tel" id="phone" placeholder="手机号"/>
+						<input class="form-control" type="password" name="userPswd" id="password1" placeholder="密码"/>
+						<div class="tishi">
+					    </div>
+						<input type="button" value="登录" id="tijiao"/>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../public/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#tijiao").click(function(e){
+    	var phone=$("#phone").val();
+        var password1=$("#password1").val();
+        console.log(password1);
+       if(phone==''||password1==''){
+       	var tishi="内容不能为空，请重新输入";
+       	$(".tishi").html(tishi);
+        return false;
+       }
+//    判断手机格式
+	      var reg = /^1[0-9]{10}$/;
+	      if(!reg.test(phone)){
+	      	var tishi="手机号格式不正确";
+			$(".tishi").html(tishi);
+			 return false;
+	      }
+//	以上全部正确后用ajax提交到后台,判断然后再跳转
+        $.ajax({
+        	url:"http://192.168.1.105:8080/sfsShop/user_login.action",
+        	type:'post',
+        	data:{tel:phone,userPswd:password1},
+        	dataType:'json',
+        	success:function(data){
+        		//console.log(data);
+        		if(data.msg=='登录成功')
+        	    {
+        	    	//      		跳转到首页面
+      	    location.href = "../index.html";//跳转网址
+      	         }else{
+      	         	var tishi=data.msg;
+      	            $(".tishi").html(tishi);
+      	         }
+    
+        	},error:function(data){
+        		console.log(2111);
+        	}
+        	
+        })
+
+   })
+	
+	</script>
+</html>

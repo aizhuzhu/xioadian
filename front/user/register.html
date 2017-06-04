@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎您注册！</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../../public/bs/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/lr.css"/>
+		<style type="text/css">
+			.warp .top{
+				width: 100%;
+				height: 60px;	
+			      }
+            .form-group{
+            	font-size: 13px!important;
+            	margin-bottom: 30px;
+            }
+            .form-group a{
+            	color: #FF3333 !important;
+            }
+            .check{
+            	margin-left: -10px;
+            	width: 90px;
+            }
+            .tishi{
+            	color: red;
+            	font-size: 18px;
+            	font-weight: 700;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			<div class="top">
+				<h1>SFS芯心小店</h1>
+			</div>
+			<div class="content">
+				<div class="c-left">
+					<img src="../public/img/loge.png"/>
+				</div>
+				<div class="c-right">
+					<div class="ct">
+						<p>注册新用户</p>
+						<p>我已经注册了，现在就<a href="login.html">登录</a></p>
+					</div>
+				 <form class="form-horizontal">
+				 	<div class="form-group">
+					    <div class="col-sm-12">
+					      <input type="text"  name="userName" class="form-control" id="nicheng" placeholder="昵称">
+					    </div>
+					   </div>
+					  <div class="form-group">
+					    <div class="col-sm-9">
+					      <input type="text" name="tel" class="form-control" id="inputnumber" placeholder="手机号">
+					    </div>
+					    <input  class="col-sm-3 control-label check" type="button" value="获取验证码">
+					  </div>
+					  <div class="form-group">
+					    <div class="col-sm-12">
+					      <input type="text" class="form-control" id="inputcheck" placeholder="验证码">
+					    </div>
+					   </div>
+					  <div class="form-group">
+					    <div class="col-sm-12">
+					      <input type="password" name="userPswd" class="form-control" id="inputPassword" placeholder="密码">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <div class="col-sm-12">
+					      <input type="password" class="form-control" id="inputaPassword" placeholder="确认密码">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <div class="col-sm-offset-2 col-sm-10">
+					      <div class="tishi">
+					      	
+					      </div>
+					    </div>
+					  <div class="form-group">
+					    <div class="col-sm-offset-2 col-sm-10">
+					      <div class="checkbox">
+					        <label>
+					          <input type="checkbox"> 请阅读<a href="#">&lt;&lt;SFS芯心小店服务条款>></a>
+					        </label>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <div class="col-sm-offset-2 col-sm-10">
+					      <button  class="btn btn-default" id="tijiao">立即注册*Sign in</button>
+					    </div>
+					  </div>
+					</form>	
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../public/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//		1.判断手机号格式是否正确
+//		2.判断输入的密码和确认密码是否一样
+//		3.判断是否为空,有空就不可以
+//		4.以上判断成功才能提交
+       $("#tijiao").click(function(e){
+       	var nicheng=$("#nicheng").val();
+       	var inputnumber=$("#inputnumber").val();
+        var inputPassword=$("#inputPassword").val();
+        var inputaPassword=$("#inputaPassword").val();
+       if(nicheng==''||inputnumber==''||inputPassword==''||inputaPassword==''){
+       	var tishi="内容不能为空，请重新输入";
+       	$(".tishi").html(tishi);
+       	return false;
+       }
+//     判断手机格式
+	      var reg = /^1[0-9]{10}$/;
+	      if(!reg.test(inputnumber)){
+	      	var tishi="手机号格式不正确";
+			$(".tishi").html(tishi);
+			return false;
+	      }
+	   if(inputPassword!=inputaPassword)
+		       {
+		       	var tishi="密码和确认密码不一样，请重新输入";
+		       	$(".tishi").html(tishi);
+		       	return false;
+		       }
+//       利用ajax提交
+         $.ajax({
+        	url:"http://192.168.1.105:8080/sfsShop/user_regist.action",
+        	type:'post',
+        	data:{userName:nicheng,tel:inputnumber,userPswd:inputPassword},
+        	dataType:'json',
+        	success:function(data){
+        		//console.log(data);
+        		if(data.msg=='注册成功')
+        	    {
+        	    	//      		跳转到首页面
+      	          location.href = "login.html";//跳转网址
+      	         }else{
+      	         	var tishi=data.msg;
+      	            $(".tishi").html(tishi);
+      	         }
+    
+        	},error:function(data){
+        		console.log(2111);
+        	}
+        	
+        })
+	})
+       	
+      
+	</script>
+</html>

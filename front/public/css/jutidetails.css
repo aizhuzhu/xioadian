@@ -1,0 +1,141 @@
+         body{
+        		background: #FFFFFF;
+        	}
+        	.showtd{
+        		display: flex;
+        		width: 100%;
+        		flex-direction: row;
+        		justify-content: space-between;
+        		/*flex-flow: nowrap;*/
+        		margin-top: 30px;
+        	}
+        	.tdleft{
+        		width: 15%;
+        		text-align: center;
+        	}
+        	.tdleft .xinpin{
+        		margin-top: 30px;
+        		padding: 10px;
+        		border: 1px solid gray;
+        	}
+        	.xinpin li,.renqi img{
+        		margin-top: 10px;
+        		font-size: 16px;
+        		color: gray;
+        	}
+        	.xinpin img,.renqi img{
+        		margin-bottom: 10px;
+        		max-width: 100%;
+        	}
+        	.tdleft .renqi{
+        		padding: 10px;
+        		margin-top: 100px;
+        		border: 1px solid gray;
+        	}
+        	.tdright{
+        		width: 83%;
+        		display: flex;
+        		flex-direction: row;
+        		flex-flow: wrap;
+        		justify-content: space-between;
+        	}
+        	.tdright .turight{
+        		width: 49%;
+        		
+        		
+        	}
+        	.tdright .wenright{
+        		width: 48%;
+        	    padding-left: 1%;
+        	    line-height: 60px;
+        		
+        	}
+        	.tdright .num button{
+        		width: 20px;
+        		height: 20px;
+        	}
+        	.tdright .num input{
+        		width: 40px;
+        		height: 20px;
+        	}
+        	.tdright .wenright span{
+        		display: inline-block;
+        		width: 50px;
+        		height: 30px;
+        		text-align: center;
+        		border: 1px solid pink;
+        		line-height: 30px;
+        		margin-right: 20px;
+        		cursor: pointer;
+        		position: relative;
+        	}
+        	.tdright .wenright span i{
+				    width: 16px;
+				    height: 16px;
+				    background: url(../img/bji.png) no-repeat;
+				    position: absolute;
+				    right: 0;
+				    bottom: 0;
+				    display: none;
+				}
+	        	.btn_form button {
+	        	margin-top: 30px;
+				cursor: pointer;
+				border: none;
+				outline: none;
+				display: inline-block;
+				font-size: 1em;
+				padding: 13px 20px;
+				background:#ff0d40;
+				color: #FFF;
+				text-transform: uppercase;
+			}
+			.showdetails{
+				width: 100%;
+				border: 1px solid gray;
+				border-bottom: none;
+				color:grey;
+				font-size: 15px;
+				font-weight: bold;
+				background: #F5F5F5;
+			}
+			.showdetails ul{
+				width: 100%;
+				height: 100%;
+			}
+			.showdetails li{
+				width: 150px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				float: left;
+				border-right: 1px solid gray;
+			}
+			.lishow{
+				border-top: 4px solid red;
+				background: gainsboro;
+			}
+			.shangpinds{
+				width: 80%;
+				height: 100%;
+				padding:5% 10%;
+				display: none;
+			}
+			.pinlunds{
+				width: 90%;
+				height: 100%;
+				padding-left:10%;
+				padding-top: 5%;
+				display: none;
+			}
+			.pinlunds h4{
+				margin-left: 48%;
+				margin-bottom: 1%;
+			}
+			.pinlunds strong{
+				color: red;
+			}
+			.showsp{
+				display: block;
+			}
+       

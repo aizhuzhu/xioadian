@@ -1,0 +1,85 @@
+ (http://sishuok.com/forumblogPost/list/5723.html（设计模式论文需要）)                        项目实战
+ 1.网站的组成
+    1.网站的界面（前台界面加后台界面）；
+    2.网站的功能（前台功能加后台功能）；
+    3.数据库的设计（数据库加表）；
+    4.还可能做成手机网站；
+    5.网站微信；
+    6.手机app;
+2.项目的目录架构
+    1.前台（index，public（css,js,img））
+    2.后台（无需复杂，用bs快速实现的）（index，public（css,js,img））；
+    3.前后公共部分(public（css,js,img）);
+3.快速开发后台利用bs
+  1.后台接口backindex.html,利用window.location="./back/index.html"到达后台index界面;
+  2.后台index，登录，会员部分页面的开发：
+       1.头部用bs中的导航条
+       2.利用栅格布局，分左侧和右侧
+                   左侧：折叠，列表组
+                   右侧：表格，缩略图，表单
+4.开发前台
+   1.首页index
+     1.导航条的实现
+             1.事件mouseenter(function(){}),mouseleave(function(){});
+             2.动画show(),hide();
+             3.遇到的问题是划过显示被下面的盖着了
+                        解决方法：position:absolute+z-index:1000
+                      position:absolute不加top,left是根据当前定位的。 
+      2.轮播图的实现
+            1.动态生成ol li就是小控制按钮
+            2.用到eq()方法
+            3.事件：mouseenter(function(){})
+            4.定时器：setInterval(函数名，时间)
+            5.动画fadeIn(),fadeOut();
+      3.动画展示的实现
+         1.事件：mouseenter(function(){})，mouseleave(function(){});
+         2.用到jquery中的find('元素名')，addClass(),removeClass(),width(),height()
+         3.要注意的函数内部得到的this是dom对象，要在函数内使用jquery对象，必须要转化成$(this)
+         才能调用jquery对象的属性和方法。
+         4.效果：hide()，show(),animate(): 代码：$("#block").animate({ 
+			    width: "90%",
+			    height: "100%", 
+			    });
+		5.用到自己封装的函数。
+		6.用到css3中的过渡，和转换，transition,transform;
+	 4.首页foot的实现
+	      1.css选择器，css伪类
+	      2.拓展点：要使用媒体查询，要看css3的手册。
+	2.登录和注册的实现
+	      基本实现实差不多的，表单，或者是bootstrap中的表单。
+            
+    3.T恤主页面的实现
+             1.利用了css3的flex布局
+             2.jquery的动画效果:show(),hide(),fadeIn(),fadeOut(),事件是mouseenter(),mouseleave();
+             3.使用$.get(url,function(data){})加载头部和脚本部分问题是它的js特效mouseenter等为啥不能实现呢;
+             4.模拟json对象进行页面优化，用到了$.each()函数;
+    4.衬衫主页面的实现
+             1.页面展示布局和T恤的是一样的
+             2.利用了jquery的动画特效：show(),hide(),slideDown()，slideUp(),事件是mouseenter(),mouseleave();
+             3.第3，第4步骤跟T恤3,4一样
+    5.外套主页面的实现
+              1.改变了轮播的风格，这里使用的无缝轮播
+              2.无缝轮播的实现：
+                               1.最后要插入和第一个页面一样的图片才能达到无缝轮播
+                               2.先得到父盒子的宽，然后每次滚动，都使ul的left-父宽，实现轮播肯定要用到动画效果，当滚到最后一张和第一张一样时把ul再重新定位一下
+    6.裙子主页面的实现：
+                     1.改变了轮播，这里使用的是手风琴效果
+                     2.手风琴效果的实现是如果触碰到当前当前的页面宽变大，其它的宽变小，但注意最后总的宽度还是一样
+                     3.各个主页面的展示主要利用了css3的3d旋转(rotate)，缩放(scale)效果.
+    7.裤子主页面的实现：
+                     1.改变了轮播图的实现，这里使用的是3d切割轮播
+                     2.切割轮播的实现是：
+                                        1.页面分成几块（这里是li），各个块中的再放几个图片的不同部分，最后页面显示是一个完整的
+                                        2.li中的放图片使用的是css3中的rotateX(度数),当度数是正的话是往上的，当是负的话，是往下的，translateZ(大盒子高度的一半)，为的是形成一个空间（长方体3d空间）
+                                        3.transform-style: preserve-3d;/*必须的因为父盒子要转子盒子也要转*/,需要旋转的要加定位（记得）
+                                        4.为每个li设置延迟效果，为的是有个动画效果，比较好看。
+    8.主页面中每个具体页面的实现：
+           1.具体T恤的实现：
+                         1.头部跟以前的一样
+                         2.主体部分，左边设计是滚动条展示，右边是各个子内容
+                         3.尾部还是一样的
+    6.做了T恤详情页面的实现
+              1.布局：使用的是flex布局的                      
+              2.放大镜的实现：用的是etalage插件，li中1放缩略图，2放要放大的图
+              3.tab栏的实现：自己实现的
+              4.使用cdn上的东西时，需要有网，所以得联网，没网的话功能无法实现是正常的。

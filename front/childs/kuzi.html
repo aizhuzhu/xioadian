@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>裤子主页面</title>
+		<link rel="stylesheet" type="text/css" href="../public/css/base.css"/>
+		<style type="text/css">
+			.lunbo3d{
+				width: 1200px;
+				height: 535px;
+				/*background: yellow;*/
+				position: relative;
+				margin-top: 50px;
+				/*perspective: 700px;*/
+				/*margin-bottom: 30px;*/
+			}
+			.prev3d, .next3d {
+			display: block;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			margin-top: -30px;
+			font-size: 40px;
+			color: #FFF;
+			text-decoration: none;
+			background-color: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			top: 50%;
+		}
+		.next3d {
+			right: 0;
+		}
+       .lunbo3d li{
+       	position: absolute;
+       	top: 0;
+       	width: 300px;
+       	height: 100%;
+       	transition: all 1s ease-in-out; /*有个过渡效果*/
+       	transform-style: preserve-3d;/*必须的因为父盒子要转子盒子也要转*/
+       }
+       .lunbo3d li div{
+       	width: 100%;
+       	height: 100%;
+       	position: absolute;/*记得加*/
+       	top: 0;
+		left: 0;
+
+       }
+       .lunbo3d li div:nth-child(1){
+       	background: url(../public/img/1.jpg);
+       	transform: rotateX(0deg) translateZ(267px);
+       }
+       .lunbo3d li div:nth-child(2){
+       	background: url(../public/img/2.jpg);
+       	transform: rotateX(-90deg) translateZ(267px);
+       }
+       .lunbo3d li div:nth-child(3){
+       	background: url(../public/img/3.jpg);
+       	transform: rotateX(-180deg) translateZ(267px);
+       }
+       .lunbo3d li div:nth-child(4){
+       	background: url(../public/img/3.jpg);
+       	transform: rotateX(-270deg) translateZ(267px);
+       }
+       .kuzishow{
+				width: 100%;
+				margin-top: 30px;
+			}
+			.kuzishow .chaqu{
+				background: #FFCCCC;
+			}
+			.kuzishow ul{
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+			    justify-content: space-around;
+				margin-top: 30px;
+				flex-wrap: wrap;
+			}
+			.kuzishow ul li{
+				width:18%;
+				position: relative;
+				margin-bottom: 30px;
+				cursor: pointer;
+			}
+			.kuzishow ul li img{
+				max-width: 100%;
+			}
+			.kuzishow .details{
+				width: 100%;
+				height: 40px;
+				background: #666666 ;
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				opacity: .8;
+				text-align: center;
+				color: #FFFFFF;
+				font-size: 17px;
+				font-weight: bold;
+				line-height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			<div class="top">
+			<ul>
+				<li>您好,欢迎光临SFS芯心小店！</li>
+				<li><a href="../user/login.html">登录</a></li>
+				<li><a href="../user/register.html">注册</a></li>
+				<li><a href="#">我的订单</a></li>
+			</ul>
+		</div>
+		<div class="log">
+         <div class="lleft">
+         	<img src="../public/img/log.png"/>
+         	<a href="#">SFS芯心小店</a>
+         </div>
+	     <div class="lright">
+	     	<input type="text" name="search" class="search" placeholder="女装"/>
+	     	<input type="button" class="btn" value="搜索" />
+	     	<div class="car">
+	     		<a  href="#">我的购物车</a>
+	     	</div>
+	     </div>
+		</div>
+	    <div class="navbar">
+	    	<ul class="one">
+	    		<li><a href="../index.html">首页</a></li>
+	    		<li>
+	    			<a href="Tindex.html">T恤</a>
+	    			<div>
+	    			<span><a href="../cchilds/bt.html">白色T恤</a></span>
+	    			<span><a href="../cchilds/bt.html">黑色T恤</a></span>
+	    			<span><a href="../cchilds/bt.html">卡通T恤</a></span>
+	    			<span><a href="../cchilds/bt.html">文字T恤</a></span>
+	    		    </div>
+	    			</li>
+	    		</li>
+	    		<li >
+	    			<a href="Chen.html">衬衫</a>
+	    			<div>
+	    			<span><a href="../cchilds/bt.html">白色衬衫</a></span>
+	    			<span><a href="../cchilds/bt.html">条纹衬衫</a></span>
+	    			<span><a href="../cchilds/bt.html">牛仔衬衫</a></span>
+	    		    </div>
+	    		</li>
+	    		
+	    		<li>
+	    			<a href="weiyi.html">外套</a>
+	    			<div>
+	    			<span><a href="../cchilds/bt.html">卫衣</a></span>
+	    			<span><a href="../cchilds/bt.html">皮衣</a></span>
+	    			<span><a href="../cchilds/bt.html">西装</a></span>
+	    			<span><a href="../cchilds/bt.html">短外套</a></span>
+	    		    </div>
+	    		</li>
+	    		
+	    		<li>
+	    			<a href="qunzi.html">裙子</a>
+	    			<div>
+	    			<span><a href="../cchilds/bt.html">短裙</a></span>
+	    			<span><a href="../cchilds/bt.html">长裙</a></span>
+	    			<span><a href="../cchilds/bt.html">皮裙</a></span>
+	    			<span><a href="../cchilds/bt.html">复古裙</a></span>
+	    		    </div>
+	    		</li>	    		
+	    		<li>
+	    			<a href="#">裤装</a>
+	    			<div>
+	    			<span><a href="../cchilds/bt.html">短裤</a></span>
+	    			<span><a href="../cchilds/bt.html">九分裤</a></span>
+	    			<span><a href="../cchilds/bt.html">高腰裤</a></span>
+	    			<span><a href="../cchilds/bt.html">打底裤</a></span>
+	    			<span><a href="../cchilds/bt.html">牛仔裤</a></span>
+	    		    </div>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <!--这里不使用以前的轮播了，改成了切割3D轮播-->
+	    <div class="lunbo3d">
+	    	<ul>
+	    		<li>
+	    			<div></div>
+	    			<div></div>
+	    			<div></div>
+	    			<div></div>
+
+	    		</li>
+	    	    <li>
+	    			<div></div>
+	    			<div></div>
+	    			<div></div>
+	    			<div></div>
+
+	    		</li>
+	    		<li>
+	    			<div></div>
+	    			<div></div>
+	    			<div></div>
+	    			<div></div>
+
+	    		</li>
+	    		<li>
+	    			<div></div>
+	    			<div></div>
+	    			<div></div>
+	    			<div></div>
+
+	    		</li>
+
+	    	</ul>
+	    	<a href="javascript:;" class="prev3d">&lt;</a>
+		    <a href="javascript:;" class="next3d">&gt;</a>
+	    </div>
+	    <!--展示部分-->
+	    <div class="kuzishow">
+	    		<!--直接贴图片吧短裤-->
+	    		<a href="#">
+	    			<div class="duanshow">
+	    			<h2 class="chaqu">短裤</h2>
+			    	<ul>
+			    	
+			    	</ul>
+					</div>
+	    		</a>
+	    		<a href="#">
+				<div class="jiushow">
+					<h2 class="chaqu">九分裤</h2>
+		    	<ul>
+		    	
+		    	</ul>
+				</div>
+				</a>
+				<a href="#">
+				<div class="gaoshow">
+					<h2 class="chaqu">高腰裤</h2>
+		    	<ul>
+		    	
+		    	</ul>
+				</div>
+				</a>
+				<a href="#">
+				<div class="dishow">
+					<h2 class="chaqu">打底裤</h2>
+		    	<ul>
+		    	
+		    	</ul>
+				</div>
+				</a>
+	    </div>
+	    <!--尾部还是异步加载出来的-->
+	     <div class="foot">
+	      	
+	      </div>
+	    
+	</div>
+	</body>
+	<script src="../../public/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/base.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.get('basef.html',function(data){
+				$(".foot").html(data);
+			})
+//			遍历每个li
+           $('.lunbo3d li').each(function(index,ele){
+//         	 为它们设置自己的left位置,让它们不一起转,会更好看
+				$(this).css({"left":index*300+'px',"transition-delay":index*0.2+"s"});
+				$(this).children("div").css("backgroundPosition",-300*index+"px 0");
+				 })
+				 var num = 0;
+//				 点击右箭头时向上转
+				 $(".next3d").on("click",function() {
+					 num++;
+					 $(".lunbo3d li").css("transform","rotateX("+num*90+"deg)");
+				 })
+//				 点击左箭头时向下转
+				 $(".prev3d").on("click",function() {
+					 num--;
+					 $(".lunbo3d li").css("transform","rotateX("+num*90+"deg)");
+				 })
+              var timer=setInterval(function(){
+              	     num++;
+					 $(".lunbo3d li").css("transform","rotateX("+num*90+"deg)");},4000);
+		});
+//		   绑定各个分类的内容
+               var jsondshow=[{'imgs':'chen5.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen2.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen3.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen4.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen5.jpg','hs':'韩范气质长袖白衬衫'},
+			    {'imgs':'chen5.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen4.jpg','hs':'一直都在找你'},{'imgs':'chen3.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen2.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'chen5.jpg','hs':'韩范气质长袖白衬衫'}];
+			    var jsonjiushow=[{'imgs':'tchen.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen2.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen3.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen4.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen5.jpg','hs':'条纹长袖时尚衬衫'},
+			    {'imgs':'tchen5.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen4.jpg','hs':'一直都在找你'},{'imgs':'tchen3.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen2.jpg','hs':'条纹长袖时尚衬衫'},{'imgs':'tchen.jpg','hs':'条纹长袖时尚衬衫'}];
+			    var jsongaoshow=[{'imgs':'nchen.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen2.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'nchen3.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen4.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen5.jpg','hs':'牛仔衬衫长袖女'},
+			    {'imgs':'nchen5.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen4.jpg','hs':'一直都在找你'},{'imgs':'nchen3.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen2.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen.jpg','hs':'牛仔衬衫长袖女'}];
+			    var jsondishow=[{'imgs':'nchen.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen2.jpg','hs':'韩范气质长袖白衬衫'},{'imgs':'nchen3.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen4.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen5.jpg','hs':'牛仔衬衫长袖女'},
+			    {'imgs':'nchen5.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen4.jpg','hs':'一直都在找你'},{'imgs':'nchen3.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen2.jpg','hs':'牛仔衬衫长袖女'},{'imgs':'nchen.jpg','hs':'牛仔衬衫长袖女'}];
+			      var src=''; 
+			      function bangding(yuansu,jsons,orgin){
+			      	$.each(jsons,function(index,item){
+			    	orgin+='<li>';
+			    	orgin+='<a href="#"><img src="../public/img/'+item.imgs+'"/></a>';
+			    	orgin+='<div class="details"><p>'+item.hs+'</p></div>';
+			    	orgin+='</li>';
+			    });
+			      yuansu.html(orgin);
+			    }
+			    bangding($('.duanshow ul'),jsondshow,src);
+			    bangding($('.jiushow ul'),jsonjiushow,src);
+			    bangding($('.gaoshow ul'),jsongaoshow,src);
+			    bangding($('.dishow ul'),jsondishow,src);
+			    
+	</script>
+</html>
+

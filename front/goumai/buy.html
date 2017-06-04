@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../../public/bs/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../public/css/lr.css"/>
+		<script src="https://cdn.bootcss.com/angular.js/1.0.4/angular.js"></script>
+		<style type="text/css">
+			body{
+				background: #FFFFFF;
+			}
+			.warp .top{
+				width: 100%;
+				height: 60px;	
+			  }
+			  .top{
+			  	position: relative;
+			  }
+			  .top ul{
+			  	position: absolute;
+			  	top: 10%;
+			  	right: 0;
+			  }
+			  .lg{
+			  	width: 100%;
+			  	height: 50px;
+			  	line-height: 50px;
+			  	margin-top: 10px;
+			  	position: relative;
+			  }
+			  .lg img{
+			  	width: 40px;
+			  	height: 30px;
+			  	position: absolute;
+			  	top: 10px;
+			  	left: 10px;
+			  }
+			  .lg h3{
+			  	position: absolute;
+			  	top: -5px;
+			  	left: 60px;
+			  	font-weight: bold;
+			  }
+			  .gwmain{
+			  	width: 99%;
+			  	height: 100%;
+			  	padding-left: 1%;
+			  }
+			  .sp{
+			  	width: 100%;
+			  	margin-top:20px;
+			  	border: 1px solid #DDDDDD;
+			  }
+			  .quanxuan
+			  {
+			  	width: 90%;
+			  	margin: 1% auto;
+			  }
+			  .sp table{
+			  	width: 90%;
+			  	margin: 1% auto;
+			  }
+			  .sp table tr{
+			  	width: 100%;
+			  	height: 150px;
+			  	line-height: 150px;
+			  	border:1px solid black;
+			  	margin-bottom: 100px;
+			  }
+			  .sp table tr:nth-child(1){
+			  	width: 100%;
+			  	height: 30px;
+			  	line-height: 30px;
+			  	background: grey;
+			  	border: none;
+			  	box-shadow: 1px 1px grey;
+			  }
+			  .sp table tr td{
+			  	display: inline-block;
+			  	width: 12%;
+			  	height: 100%;
+			  	text-align: center;
+			  }
+			  .sp table img{
+			  	max-width: 50%;
+			  	border: 1px solid #DDDDDD;
+			  }
+			  .num input{
+			  	width: 60px;
+			  	height: 20px;
+			  	display:inline-block;
+			  }
+			  .gj{
+			  	width: 100%;
+			  	height: 100px;
+			  	background: yellowgreen;
+			  	margin-top: 20px;
+			  	border: 1px solid #DDDDDD;
+			  }
+			  .btn_form button {
+	        	margin-top: 30px;
+				cursor: pointer;
+				border: none;
+				outline: none;
+				display: inline-block;
+				font-size: 1em;
+				padding: 13px 20px;
+				background:#ff0d40;
+				color: #FFF;
+				text-transform: uppercase;
+			}
+			.num button{
+        		width: 20px;
+        		height: 20px;
+        	}
+             .num input{
+        		width: 40px;
+        		height: 20px;
+        	}
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			<div class="top">
+				<h1>SFS芯心小店</h1>
+				<ul>
+					<li>您好,欢迎光临SFS芯心小店！</li>
+					<li><a href="../user/login.html">登录</a></li>
+					<li><a href="../user/register.html">注册</a></li>
+					<li><a href="../user/register.html">帮助中心</a></li>
+				</ul>
+			</div>
+			<div class="guowuche">
+				<div class="lg">
+					<img src="../public/img/gouwuche.png"/>
+					<h3>我的购物车</h3>
+				</div>
+				<div class="gwmain">
+					<p><strong>温馨提示：</strong>1.选购清单中的商品无法保留库存，请您及时结算。2.商品的价格和库存将以订单提交时为准。3.促销活动满减优惠将均摊至商品小计中。</p>
+					<div class="sp">
+						<div class="quanxuan">
+						 <input type="checkbox" name="quan" id="quan" style="display: inline-block"/> 
+						 <p style="display: inline-block">全选</p>
+						 </div>
+						<table cellspacing="0">
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>商品名称</td>
+								<td>尺寸</td>
+								<td>单价</td>
+								<td>数量</td>
+								<td>总计</td>
+								<td>操作</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="s1" id="s1"/></td>
+								<td><img src="../public/img/chen3.jpg"/></td>
+								<td>韩版气质漂亮衬衫</td>
+								<td>M</td>
+								<td>￥78</td>
+								<td>1</td>
+								<td>￥78</td>
+								<td>￥78</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="s1" id="s1"/></td>
+								<td><img src="../public/img/chen3.jpg"/></td>
+								<td>韩版气质漂亮衬衫</td>
+								<td>M</td>
+								<td>￥78</td>
+								<td>
+							 <div ng-app="num" ng-controller="shuliang" class="num">
+						      <button ng-click='dec()'>-</button>
+						      <input type="text"  ng-model="shu" readonly="readonly"/>
+						      <button ng-click='add()'>+</button>
+						    </div>
+								</td>
+								<td>￥78</td>
+								<td>￥78</td>
+							</tr>
+						</table>
+					</div>
+					<div class="gj">
+						<div class="sj">
+							<h5>数量是：<strong>3</strong>件</h5>
+							<h4>产品金额共计：<strong>300</strong>元</h4>
+						</div>
+						<div class="gb">
+							<div class="btn_form">
+                            <button type="button" id='btnaddcart'>继续购物</button>
+                            <button type="button" id='btnbuy'>去结算</button>
+					       </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//			数量的增加和减少
+		var app=angular.module('num',[]);
+        app.controller('shuliang',function($scope){
+        	$scope.shu=1;
+        	$scope.dec=function(){
+        		if(this.shu>1)
+        		this.shu-=1;
+        	}
+        	$scope.add=function(){
+        		this.shu+=1;
+        	}
+        });
+	</script>
+</html>
+

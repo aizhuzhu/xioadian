@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>卫衣主页面</title>
+		<link rel="stylesheet" type="text/css" href="../public/css/base.css"/>
+		<style type="text/css">
+			.lunbow{
+			width: 100%;
+			height: 535px;
+			overflow: hidden;
+			position: relative;
+			margin-top: 30px;
+		  }
+			.lunbow ul{
+				width: 1000%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				position: absolute;
+			}
+			.lunbow ul li{
+				float: left;
+				cursor: pointer;
+			}
+			.lunbow img{
+			display: block;/*可以消除图片默认的下边距*/
+		     }
+			.showweiyi{
+				width: 100%;
+				margin-top: 30px;
+			}
+			.showwy1{
+				width: 100%;
+				text-align: center;
+			}
+			.showwy1 h1{
+				color: #000000;
+				margin-top: 40px;
+				margin-bottom: 40px;
+				font-weight: bold;
+			}
+			.showwy1 ul{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+			    justify-content:center;
+				margin-top: 30px;
+				flex-wrap: wrap;
+		  }
+		   .showwy1 ul li{
+				width:100%;
+				height: 100%;
+				margin-bottom:5%;
+				cursor: pointer;
+			}
+			.showwy1 ul li img{
+				max-width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="warp">
+			<div class="top">
+			<ul>
+				<li>您好,欢迎光临SFS芯心小店！</li>
+				<li><a href="../user/login.html">登录</a></li>
+				<li><a href="../user/register.html">注册</a></li>
+				<li><a href="#">我的订单</a></li>
+			</ul>
+		</div>
+		<div class="log">
+         <div class="lleft">
+         	<img src="../public/img/log.png"/>
+         	<a href="#">SFS芯心小店</a>
+         </div>
+	     <div class="lright">
+	     	<input type="text" name="search" class="search" placeholder="女装"/>
+	     	<input type="button" class="btn" value="搜索" />
+	     	<div class="car">
+	     		<a  href="#">我的购物车</a>
+	     	</div>
+	     </div>
+		</div>
+	    <div class="navbar">
+	    	<ul class="one">
+	    		<li><a href="../index.html">首页</a></li>
+	    		<li>
+	    			<a href="Tindex.html">T恤</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">白色T恤</a></span>
+	    			<span><a href="../cchilds/wt.html">黑色T恤</a></span>
+	    			<span><a href="../cchilds/wt.html">卡通T恤</a></span>
+	    			<span><a href="../cchilds/wt.html">文字T恤</a></span>
+	    		    </div>
+	    			</li>
+	    		</li>
+	    		<li >
+	    			<a href="Chen.html">衬衫</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">白色衬衫</a></span>
+	    			<span><a href="../cchilds/wt.html">条纹衬衫</a></span>
+	    			<span><a href="../cchilds/wt.html">牛仔衬衫</a></span>
+	    		    </div>
+	    		</li>
+	    		
+	    		<li>
+	    			<a href="#">外套</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">卫衣</a></span>
+	    			<span><a href="../cchilds/wt.html">皮衣</a></span>
+	    			<span><a href="../cchilds/wt.html">西装</a></span>
+	    			<span><a href="../cchilds/wt.html">短外套</a></span>
+	    		    </div>
+	    		</li>
+	    		
+	    		<li>
+	    			<a href="qunzi.html">裙子</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">短裙</a></span>
+	    			<span><a href="../cchilds/wt.html">长裙</a></span>
+	    			<span><a href="../cchilds/wt.html">皮裙</a></span>
+	    			<span><a href="../cchilds/wt.html">复古裙</a></span>
+	    		    </div>
+	    		</li>	    		
+	    		<li>
+	    			<a href="kuzi.html">裤装</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">短裤</a></span>
+	    			<span><a href="../cchilds/wt.html">九分裤</a></span>
+	    			<span><a href="../cchilds/wt.html">高腰裤</a></span>
+	    			<span><a href="../cchilds/wt.html">打底裤</a></span>
+	    			<span><a href="../cchilds/wt.html">牛仔裤</a></span>
+	    		    </div>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <!--这里不使用以前的轮播了，改成了无缝轮播-->
+	    <div class="lunbow">
+	    	<ul>
+				<li><img src="../public/img/1.jpg"/></li>
+				<li><img src="../public/img/2.jpg"/></li>
+				<li><img src="../public/img/3.jpg"/></li>
+				<li><img src="../public/img/1.jpg"/></li>
+			</ul>
+	    </div>
+	      <!--展示卫衣部分-->
+	      <div class="showweiyi">
+	      	<a href="#">
+	      	<div class="showwy1">
+	      		<h1>潮流卫衣新款</h1>
+	      		<img src="../public/img/weiyi1.jpg"/>
+	      	</div>
+	      	</a>
+	      	<a href="#">
+	      	<div class="showwy1">
+	      		<h1>潮流皮衣</h1>
+	      		<img src="../public/img/piyi1.jpg"/>
+	      	</div>
+	      	</a>
+	      	<a href="#">
+	      	<div class="showwy1">
+	      		<h1>帅气西装女</h1>
+	      		<img src="../public/img/xizhaung1.jpg
+	      			"/>
+	      	</div>
+	      	</a>
+	      	<a href="#">
+	      	<div class="showwy1">
+	      		<h1>潮流新款短外套</h1>
+	      		<img src="../public/img/duan1.jpg"/>
+	      	</div>
+	      	</a>
+	      </div>
+	      <div class="foot">
+	      	
+	      </div>
+	</div>
+	<script src="../../public/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/base.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.get('basef.html',function(data){
+				$(".foot").html(data);
+			})
+			//		页面一加载就发送请求到后台得到数据,进行页面填充
+	       $.ajax({
+	       	url:'http://192.168.1.105:8080/sfsShop/goods_showGoods.action',
+	       	dataType:'json',
+	        success:function(data){
+	        		console.log(data);
+	        		console.log(1111);
+	        },
+	        error:function(){
+	        	console.log(2111);
+	        	}
+	       })
+//			1.得到轮播盒子的宽度
+			var lw=$(".lunbow").width();
+    		console.log(lw);
+            console.log($('.lunbow ul').css('left'));
+//          控制滚动张数
+            var num=0;
+//          2.实现滚动函数
+            function gundong(){
+            	num--;//控制ul的left值
+            	console.log(num);
+            	num<-3600?num=0:num;
+            	$('.lunbow ul').css('left',num);
+            };
+            //3.设置定时器
+            var timer=setInterval(gundong,25);
+//          4.当鼠标放上时清除定时器
+           $('.lunbow').mouseenter(function(){
+           	clearInterval(timer);
+           });
+           $(".lunbow").mouseleave(function(){
+           	   timer=setInterval(gundong,10);
+           })
+            
+		})
+	</script>
+	</body>
+</html>

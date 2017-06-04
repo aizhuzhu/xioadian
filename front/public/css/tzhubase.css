@@ -1,0 +1,85 @@
+       body{
+			background: #FFFFFF;
+		}
+		.contain{
+			width: 100%;
+			height: 100%;
+			margin-top: 40px;
+			display: flex;
+        	flex-direction: row;
+        	justify-content: space-between;
+		}
+		.lefts{
+        		width: 15%;
+        		height: 1000px;
+        		background: yellow;
+        		text-align: center;
+        		overflow-y: scroll;
+        	}
+        .lefts .sgwt{
+        	padding: 10px;
+        	border: 1px solid gray;
+        }
+        .sgwt img{
+        	max-width: 100%;
+        	}
+        .rights{
+        	width: 81%;
+        	padding:1%;
+        	height: 100%;
+        }
+        .rights ul{
+        	width: 100%;
+        	height: 100%;
+        	display: flex;
+        	flex-direction: row;
+        	flex-flow: wrap;
+        }
+        .rights ul li{
+        	width: 25%;
+        	padding: 1%;
+        	height: 350px;
+        	background: #FFFFFF;
+        	margin-top: 2%;
+        	margin-left: 5%;
+        	border: 1px solid #DDDDDD;
+        }
+        .rights ul li img{
+        	max-width: 100%;
+        }
+        .wtdetails{
+        	padding: 5px;
+        	line-height: 25px;
+        }
+        .wtdetails strong,.wtdetails s{
+        	font-size: 22px;
+        	line-height: 30px;
+        	margin-right: 20px;
+        }
+        .wtdetails strong{
+        	color: red;
+        }
+       .pages{
+       	width: 50%;
+       	height: 50px;
+       	margin: 5% auto;
+       }
+       .fenye{
+       	display: inline-block;
+       	width: 100%;
+       	height: 50px;
+       }
+       .fenye a,.fenye span{
+       	display: inline-block;
+       	width: 49px;
+       	height: 45px;
+       	line-height: 45px;
+       	border: 2px solid #DDDDDD;
+       	text-align: center;
+       }
+      .fcurrent{
+      	background: #FF0000;
+      }
+      .foot{
+      	padding-top: 0;
+      }

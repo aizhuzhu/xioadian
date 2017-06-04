@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>裙子主页面</title>
+		<link rel="stylesheet" type="text/css" href="../public/css/base.css"/>
+	</head>
+	<style type="text/css">
+		.sfq{
+			width: 100%;
+			height: 535px;
+			overflow: hidden;
+			margin-top: 30px;
+		}
+		.sfq ul{
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			flex-flow: nowrap;
+			height: 100%;
+		}
+		.sfq ul li{
+			width: 33%;
+			height: 100%;
+		}
+		.qunzishow{
+			width: 100%;
+			height: 100%;
+			margin-top: 40px;
+		}
+		.qzd{
+			width: 100%;
+			height: 600px;
+			font-size: 40px;
+			font-weight: bold;
+			text-shadow: 3px 3px 5px #FFFFFF;
+			position: relative;
+		}
+		.qzc,.qzp,.qzg{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			font-size: 40px;
+			font-weight: bold;
+			text-shadow: 3px 3px 5px #FFFFFF;
+			margin-top: 50px;
+		}
+		.qzc img{
+			-webkit-transform: rotate(5deg);
+			-moz-transform:rotate(5deg) ;
+			transform:rotate(5deg) ;
+		}
+		.qzp img{
+			-webkit-transform: rotate(-5deg);
+			-moz-transform:rotate(-5deg) ;
+			transform:rotate(-5deg) ;
+		}
+		.qzd img:hover{
+			-webkit-transform: scale(0.6);
+			-moz-transform:scale(0.6);
+			transform:scale(0.6);
+			-webkit-transform: rotate(10deg);
+			-moz-transform:rotate(10deg);
+			transform:rotate(10deg);
+			-webkit-box-shadow: 3px 3px 3px pink;
+			box-shadow: 3px 3px 3px pink;
+		}
+		.qzg img:hover{
+			-webkit-transform: scale(0.6);
+			-moz-transform:scale(0.6);
+			transform:scale(0.6);
+			-webkit-transform: rotate(10deg);
+			-moz-transform:rotate(10deg);
+			transform:rotate(10deg);
+			-webkit-box-shadow: 3px 3px 3px pink;
+			box-shadow: 3px 3px 3px pink;
+		}
+		.qzp img:hover{
+			-webkit-transform: scale(0.6);
+			-moz-transform:scale(0.6);
+			transform:scale(0.6);
+			-webkit-transform: rotate(5deg);
+			-moz-transform:rotate(5deg);
+			transform:rotate(5deg);
+			-webkit-box-shadow: 3px 3px 3px pink;
+			box-shadow: 3px 3px 3px pink;
+		}
+		.qzc img:hover{
+			-webkit-transform: scale(0.6);
+			-moz-transform:scale(0.6);
+			transform:scale(0.6);
+			-webkit-transform: rotate(-5deg);
+			-moz-transform:rotate(-5deg);
+			transform:rotate(-5deg);
+			-webkit-box-shadow: 3px 3px 3px pink;
+			box-shadow: 3px 3px 3px pink;
+		}
+		.qzd h2,.qzc h2{
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.qzd img{
+			position: absolute;
+		}
+		.qzd .one{
+			top: 130px;
+			left: 100px;
+			-webkit-transform: rotate(-50deg);
+			-moz-transform:rotate(-50deg) ;
+			transform:rotate(-50deg) ;
+		}
+		.qzd .two{
+			top: 150px;
+			right: 100px;
+			-webkit-transform: rotate(15deg);
+			-moz-transform:rotate(15deg) ;
+			transform:rotate(15deg) ;
+		}
+	</style>
+	<body>
+		<div class="warp">
+			<div class="top">
+			<ul>
+				<li>您好,欢迎光临SFS芯心小店！</li>
+				<li><a href="../user/login.html">登录</a></li>
+				<li><a href="../user/register.html">注册</a></li>
+				<li><a href="#">我的订单</a></li>
+			</ul>
+		</div>
+		<div class="log">
+         <div class="lleft">
+         	<img src="../public/img/log.png"/>
+         	<a href="#">SFS芯心小店</a>
+         </div>
+	     <div class="lright">
+	     	<input type="text" name="search" class="search" placeholder="女装"/>
+	     	<input type="button" class="btn" value="搜索" />
+	     	<div class="car">
+	     		<a  href="#">我的购物车</a>
+	     	</div>
+	     </div>
+		</div>
+	    <div class="navbar">
+	    	<ul class="one">
+	    		<li><a href="../index.html">首页</a></li>
+	    		<li>
+	    			<a href="Tindex.html">T恤</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">白色T恤</a></span>
+	    			<span><a href="../cchilds/wt.html">黑色T恤</a></span>
+	    			<span><a href="../cchilds/wt.html">卡通T恤</a></span>
+	    			<span><a href="../cchilds/wt.html">文字T恤</a></span>
+	    		    </div>
+	    			</li>
+	    		</li>
+	    		<li >
+	    			<a href="Chen.html">衬衫</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">白色衬衫</a></span>
+	    			<span><a href="../cchilds/wt.html">条纹衬衫</a></span>
+	    			<span><a href="../cchilds/wt.html">牛仔衬衫</a></span>
+	    		    </div>
+	    		</li>
+	    		
+	    		<li>
+	    			<a href="weiyi.html">外套</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">卫衣</a></span>
+	    			<span><a href="../cchilds/wt.html">皮衣</a></span>
+	    			<span><a href="../cchilds/wt.html">西装</a></span>
+	    			<span><a href="../cchilds/wt.html">短外套</a></span>
+	    		    </div>
+	    		</li>
+	    		
+	    		<li>
+	    			<a href="#">裙子</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">短裙</a></span>
+	    			<span><a href="../cchilds/wt.html">长裙</a></span>
+	    			<span><a href="../cchilds/wt.html">皮裙</a></span>
+	    			<span><a href="../cchilds/wt.html">复古裙</a></span>
+	    		    </div>
+	    		</li>	    		
+	    		<li>
+	    			<a href="kuzi.html">裤装</a>
+	    			<div>
+	    			<span><a href="../cchilds/wt.html">短裤</a></span>
+	    			<span><a href="../cchilds/wt.html">九分裤</a></span>
+	    			<span><a href="../cchilds/wt.html">高腰裤</a></span>
+	    			<span><a href="../cchilds/wt.html">打底裤</a></span>
+	    			<span><a href="../cchilds/wt.html">牛仔裤</a></span>
+	    		    </div>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <!--这里不使用以前的轮播了，改成了手风琴效果了-->
+	    <div class="sfq">
+	    	 <ul>
+	    	 	<li></li>
+	    	 	<li></li>
+	    	 	<li></li>
+	    	 </ul>
+	    </div>
+	    <!--这里放展示的部分，点击展示需要跳转到想应的页面进行购买-->
+	    <div class="qunzishow">
+	    	<!--当滚动到这 h2慢慢移动过来，图片进行旋转，最后旋转到某个停住-->
+	    	<div class="qzd">	
+	    		<a href="#">
+	    		<h2>MM短裙</h2>
+	    		<img src="../public/img/sl3.jpg" class="one"/>
+	    		<img src="../public/img/sl2.jpg" class="two"/>
+	    		</a>
+	    	</div>
+	    	<div class="qzc">	
+	    		<a href="#">
+	    		<h2>MM长裙</h2>
+	    		<img src="../public/img/duan2.jpg"/>
+	    		</a>
+	    	</div>
+	    	<div class="qzp">	
+	    		<a href="#">
+	    		<h2>MM皮裙</h2>
+	    		<img src="../public/img/duan2.jpg"/>
+	    		</a>
+	    	</div>
+	    	<div class="qzg">	
+	    		<a href="#">
+	    		<h2>MM复古裙</h2>
+	    		<img src="../public/img/duan2.jpg"/>
+	    		</a>
+	    	</div>
+	    </div>
+	    <!--尾部还是异步加载出来的-->
+	     <div class="foot">
+	      	
+	      </div>
+	    
+	</div>
+	</body>
+	<script src="../../public/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../public/js/base.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.get('basef.html',function(data){
+				$(".foot").html(data);
+			});
+			for(var i=0;i<$('.sfq li').length;i++){
+         $('.sfq li').eq(i).css( "background-image","url(../public/img/"+(i+1)+".jpg)");
+		}
+		$('.sfq li').mouseenter(function(){
+//			当前的li的宽度变大,其它的几个平分剩余的
+        $(this).css("width",'65%').siblings("li").css("width","17%");
+		});
+		$('.sfq li').mouseleave(function(){
+//			恢复原样
+          $(this).css("width",'33%').siblings("li").css("width","33%");
+		})
+		});
+		
+	</script>
+	
+</html>

@@ -1,0 +1,73 @@
+   
+/*展示*/
+   .show1,.show4{
+   	width: 100%;
+   	height: 500px;
+   	margin-top: 40px;
+   }
+   .show4 .sleft{
+   		margin-left: 2%;
+   		margin-right: 0;
+   }
+   .sleft{
+   	width: 31%;
+   	height: 100%;
+   	margin-right: 2%;
+   	overflow: hidden;
+   	position: relative;
+   }
+   .sright{
+   	width: 67%;
+   	height: 100%;
+   	overflow: hidden;
+   	position: relative;
+   }
+   .s1{
+   	width: 100%;
+   	height: 40%;
+   	background: pink;
+   	margin-bottom: 2%;
+   }
+   .right{
+   	float: right;
+   }
+   .left{
+   	float: left;
+   }
+.show2{
+   	width: 100%;
+   	height: 700px;
+   	margin-top: 20px;
+   	overflow: hidden;
+   	position: relative;
+   }
+ .show2 h2{
+ 	font-size: 40px;
+ 	color: #FFFFFF;
+ 	position: absolute;
+ 	top: 100px;
+ 	left: 100px;
+ 	
+ }
+ .trsf{
+ 	transform: translateX(-600px);
+ }
+ .show3{
+   	width: 100%;
+   	height: 400px;
+   	margin-top: 20px;
+   	text-align: center;
+   }
+.show3 img,.show4 img{
+	max-width: 100%;
+	height: 100%;
+}
+.describe{
+	width: 200px;
+	height: 60px;
+	padding-top: 20px;
+	position: absolute;
+	bottom: 0px;
+	left: 70px;
+	background: #FFFFFF;
+}
