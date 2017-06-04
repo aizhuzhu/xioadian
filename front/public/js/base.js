@@ -1,10 +1,10 @@
 $(function(){      //	控制导航显示的
    $(".one").on("mouseenter","li",function(){
-	$(this).find('div').addClass('two').show();
-	$(this).siblings('li').find('div').hide();
+	$(this).find('div').addClass('two').fadeIn();
+	$(this).siblings('li').find('div').fadeOut();
 	});
 	$(".one").on("mouseleave","li",function(){
-	$(this).find('div').hide();	
+	$(this).find('div').fadeOut();	
 	});
 //	以上可能是公共部分
 //控制轮播图
